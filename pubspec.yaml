@@ -1,0 +1,77 @@
+name: retroflux
+description: A new Flutter project.
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.5.4
+  gradient_colored_slider: ^1.0.2
+  shared_preferences: ^2.0.15
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.1
+  get_it: ^7.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+  - family: poppins
+    fonts:
+      - asset: fonts/Poppins-Regular.ttf
+
+  - family: bebas-neue 
+    fonts:
+      - asset: fonts/BebasNeue-Regular.ttf
+
+  - family: roboto 
+    fonts:
+      - asset: fonts/Roboto-Regular.ttf
+
+  - family: roboto-medium
+    fonts:
+      - asset: fonts/Roboto-Medium.ttf
+
+  - family: roboto-light
+    fonts:
+      - asset: fonts/Roboto-Light.ttf
+ 
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

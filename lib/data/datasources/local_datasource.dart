@@ -27,9 +27,9 @@ class LocalDataSourceImpl implements LocalDataSource {
       return ProductivityLogModel.fromJson(decodedJson);
     } else {
       var dummyJson = {
-        "date": "We're thrilled to have you!",
+        "date": DateTime.now().subtract(Duration(days: 1)).toString(),
         "productivityScore": "100",
-        "title": "Your first sample log",
+        "title": "Your first log. We're thrilled to have you!",
         "description":
             "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
       };

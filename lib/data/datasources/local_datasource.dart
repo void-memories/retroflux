@@ -26,70 +26,25 @@ class LocalDataSourceImpl implements LocalDataSource {
           List<Map<String, dynamic>>.from(json.decode(data));
       return ProductivityLogModel.fromJson(decodedJson);
     } else {
-      var dummyJson = [
-        {
-          "date": DateTime.now().subtract(const Duration(days: 7)).toString(),
-          "productivityScore": "84",
-          "title": "A smooth day",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-        {
-          "date": DateTime.now().subtract(const Duration(days: 6)).toString(),
-          "productivityScore": "45",
-          "title": "Barely good",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-        {
-          "date": DateTime.now().subtract(const Duration(days: 5)).toString(),
-          "productivityScore": "85",
-          "title": "Productive AF",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-        {
-          "date": DateTime.now().subtract(const Duration(days: 4)).toString(),
-          "productivityScore": "34",
-          "title": "Monday blues",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-        {
-          "date": DateTime.now().subtract(const Duration(days: 3)).toString(),
-          "productivityScore": "94",
-          "title": "Best day ever",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-        {
-          "date": DateTime.now().subtract(const Duration(days: 2)).toString(),
-          "productivityScore": "71",
-          "title": "Average kind of day",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-        {
-          "date": DateTime.now().subtract(const Duration(days: 1)).toString(),
-          "productivityScore": "68",
-          "title": "A meh kind of day",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-        {
-          "date": DateTime.now().subtract(const Duration(days: 0)).toString(),
-          "productivityScore": "100",
-          "title": "The best day of my life",
-          "description":
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
-        },
-      ];
+      var dummyJson = {
+        "date": "We're thrilled to have you!",
+        "productivityScore": "100",
+        "title": "Your first sample log",
+        "description":
+            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+      };
 
-      for (var i in (dummyJson)) {
-        saveData(ProductivityLogModel(i["date"]!, i["productivityScore"]!,
-            i["title"]!, i["description"]!, "", "", ""));
-      }
-      return [];
+      var dummyProdModel = ProductivityLogModel(
+          dummyJson["date"]!,
+          dummyJson["productivityScore"]!,
+          dummyJson["title"]!,
+          dummyJson["description"]!,
+          "Perfect",
+          "0xff33cc66",
+          "🥰");
+
+      saveData(dummyProdModel);
+      return [dummyProdModel];
     }
   }
 

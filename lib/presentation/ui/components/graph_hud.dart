@@ -132,7 +132,7 @@ List<double> getPeakValues(List<ProductivityLogModel> logs) {
   List<double> peaks = [];
   for (int i = 0; i < 7; i++) {
     if (i + 1 > logs.length) {
-      peaks.add(5.0);
+      peaks.add(0.1);
     } else {
       peaks.add(double.parse(logs[i].productivityScore));
     }
